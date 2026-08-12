@@ -22,12 +22,6 @@ Creates and reschedules macOS Reminders (fast nudges) and private Calendar event
 - Compatibility: macOS with Reminders and Calendar; AppleScript via `osascript`
 - Scripts (JS only): `where.mjs`, `next-free.mjs`, `move-reminder.mjs`
 
-## Debugging skills (human only)
-
-QA checklists live under [`debug/`](./debug/). They are **not** skill resources — do not link them from `SKILL.md`, and agents should not load them.
-
-- [`debug/remind-me.md`](./debug/remind-me.md)
-
 ## License
 
 MIT
