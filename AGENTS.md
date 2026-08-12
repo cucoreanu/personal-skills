@@ -10,8 +10,10 @@ When you add or change a skill under `skills/`:
 2. Put the **individual install command** immediately after that skill’s description — not in a shared “install one skill globally” section at the top.
 
 ```bash
-npx skills add cucoreanu/personal-skills --skill <skill-name> -g -y
+npx skills add cucoreanu/personal-skills --skill <skill-name>
 ```
+
+Do **not** add `-g` / `-y` (or other install flags) to documented commands — leave scope and prompts to the user/CLI defaults.
 
 3. Keep the top-level install (whole package) only:
 
@@ -19,7 +21,7 @@ npx skills add cucoreanu/personal-skills --skill <skill-name> -g -y
 npx skills add cucoreanu/personal-skills
 ```
 
-4. Do not document a single skill’s install outside its own README subsection.
+4. Put each skill’s install command under that skill’s heading section in README.md. Do not repeat it at the top of the README or in any shared install block.
 
 ## Commits
 

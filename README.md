@@ -13,7 +13,7 @@ npx skills add cucoreanu/personal-skills
 Creates and reschedules macOS Reminders (fast nudges) and private Calendar events (time blocks). Default schedule: next free day starting tomorrow unless the user names an exact time. Never shares calendars or invites to anyone. Use when the user says "remind me", "add a reminder", "move reminder", "reschedule reminder", "push that reminder to", "put this on my calendar", "schedule this", "block time", or "don't let me forget".
 
 ```bash
-npx skills add cucoreanu/personal-skills --skill remind-me -g -y
+npx skills add cucoreanu/personal-skills --skill remind-me
 ```
 
 - Path: [`skills/remind-me/`](./skills/remind-me/)
