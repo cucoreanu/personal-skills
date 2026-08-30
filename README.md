@@ -22,6 +22,13 @@ Creates and reschedules macOS Reminders (fast nudges) and private Calendar event
 - Compatibility: macOS with Reminders and Calendar; AppleScript via `osascript`
 - Scripts (JS only): `where.mjs`, `next-free.mjs`, `move-reminder.mjs`
 
+### writing
+
+Proofreads Slack-style workplace messages and teaches reusable writing patterns. Use when the user pastes a work message, Slack draft, status update, or asks for proofreading, tone, clarity, grammar, flow, or constructive feedback on writing they will send at work.
+
+- Path: [`skills/writing/`](./skills/writing/)
+- Response shape: clean version → what changed and why → risk check → better pattern to learn
+
 ## Debugging skills (human only)
 
 QA checklists live under [`debug/`](./debug/). They are **not** skill resources — do not link them from `SKILL.md`, and agents should not load them.
