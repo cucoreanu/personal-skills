@@ -31,6 +31,20 @@ npx skills add cucoreanu/personal-skills --skill writing
 - Path: [`skills/writing/`](./skills/writing/)
 - Response shape: clean version → what changed and why → risk check → better pattern to learn
 
+### penpot-design
+
+Designs UI in Penpot via MCP with component discipline, flex alignment, mockup/design modes, and optional skill updates from user feedback. Use for Penpot mockups, high-fidelity designs, Penpot MCP work, or component/variant refactors in Penpot.
+
+```bash
+npx skills add cucoreanu/personal-skills --skill penpot-design
+```
+
+- Path: [`skills/penpot-design/`](./skills/penpot-design/)
+- Modes: `mockup` (low-fi validation; multi-alt only when asked) · `design` (higher fidelity)
+- Extendable: asks before capturing reusable user feedback into the skill; updates `personal-skills` after the current task, then reinstalls
+- References: Material-inspired control alignment, Penpot API pitfalls
+- Research notes: [`research/penpot-design-practices.md`](./research/penpot-design-practices.md), [`research/material-design-alignment.md`](./research/material-design-alignment.md)
+
 ## License
 
 MIT
