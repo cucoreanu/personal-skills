@@ -3,7 +3,8 @@ node_modules/
 *.log
 
 # Other agent roots the Skills CLI may create locally.
-# Canonical project install is .agents/skills/ (plus .claude/skills/ symlinks).
+# Project install: .agents/skills/<name> → ../../skills/<name>;
+# .claude/skills/<name> → ../../.agents/skills/<name>.
 .cursor/
 .codex/
 .goose/
