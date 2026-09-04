@@ -6,8 +6,6 @@ Personal [Agent Skills](https://agentskills.io/) for Cursor / Claude Code / Code
 npx skills add cucoreanu/personal-skills
 ```
 
-Authored packages live under [`skills/`](./skills/). The same folders are also installed as Cursor **project skills** in [`.cursor/skills/`](./.cursor/skills/) so Cloud Agents and local workspaces can load them without a separate `npx skills add`.
-
 ## Skills
 
 ### remind-me
