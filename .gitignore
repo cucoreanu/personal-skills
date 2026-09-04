@@ -7,7 +7,9 @@ skills-lock.json
 .skills-lock.json
 .agents/
 .claude/
-.cursor/
+.cursor/*
+!.cursor/skills/
+!.cursor/skills/**
 .codex/
 .goose/
 .opencode/
