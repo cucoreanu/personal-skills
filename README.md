@@ -45,6 +45,18 @@ npx skills add cucoreanu/personal-skills --skill penpot-design
 - References: Material-inspired control alignment, Penpot API pitfalls
 - Research notes: [`research/penpot-design-practices.md`](./research/penpot-design-practices.md), [`research/material-design-alignment.md`](./research/material-design-alignment.md)
 
+### install-local-skill
+
+Agent-only. After the user asks to create a PR for a new or updated skill under skills/ (never this skill), check project install vs source with scripts/diff-install.mjs; if missing or stale, ask to install locally via relative symlinks. Use when authoring or changing skills in this repo, opening a skill PR, or finishing skill work.
+
+```bash
+npx skills add cucoreanu/personal-skills --skill install-local-skill
+```
+
+- Path: [`skills/install-local-skill/`](./skills/install-local-skill/)
+- `user-invocable: false` — agents invoke this; it is not a user slash command
+- Scripts: `diff-install.mjs` (fast symlink/realpath check, `diff -rq` only if needed), `install.mjs` (relative `.agents` / `.claude` symlinks)
+
 ## License
 
 MIT
