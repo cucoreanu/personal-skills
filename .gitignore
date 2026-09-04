@@ -2,16 +2,16 @@
 node_modules/
 *.log
 
-# Skills CLI / agent install artifacts (local only — not the authored package)
-skills-lock.json
-.skills-lock.json
-.agents/
-.claude/
+# Other agent roots the Skills CLI may create locally.
+# Project install: .agents/skills/<name> → ../../skills/<name>;
+# .claude/skills/<name> → ../../.agents/skills/<name>.
 .cursor/
 .codex/
 .goose/
 .opencode/
 .openclaw/
+.skills-lock.json
+agent/
 
 # Human-only debug notes (not shipped with the skill)
 debug/

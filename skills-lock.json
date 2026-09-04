@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "penpot-design": {
+      "source": ".",
+      "sourceType": "local",
+      "computedHash": "d79ad94b74684e38bece6d8183b0df31f66c721f8c852ddc68625f61160da180"
+    },
+    "remind-me": {
+      "source": ".",
+      "sourceType": "local",
+      "computedHash": "d28f7164747546dc92d4caba7e86270518aa3f939564e269cce84761dfa9fd1f"
+    },
+    "writing": {
+      "source": ".",
+      "sourceType": "local",
+      "computedHash": "5082d2f2bb9573a05922e3f1a4ca440fb92f4608126e5cf24d2e60a120996745"
+    }
+  }
+}
