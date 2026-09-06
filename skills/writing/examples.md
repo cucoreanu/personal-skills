@@ -52,3 +52,24 @@ Feedback:
 - “facilitate the rollout” is correct but a bit stiff. “Support the rollout” is clearer.
 - “I think putting those scripts out is higher priority” is understandable but rough. “Shipping those scripts should be prioritized” sounds more professional.
 - The original had good transparency, but the flow needed clearer sequencing.
+
+## Example 3
+
+Someone nits a joke. User drafted:
+
+> My definition of fancy is bound to having an arrow
+
+Suggested send:
+
+> My bar for fancy is the arrow.
+
+Not:
+
+> My bar for fancy is the arrow is the arrow.
+
+Feedback:
+
+- The idea is a definition, not a debate. Do not re-prove the original post.
+- “Bound to having” is academic filler in front of the punchline. Put the visible thing last and stop.
+- Repeat the last noun once. Doubling it reads like a typo, not emphasis.
+- Adding how the UI works, or conceding “yeah they’re just windows,” over-explains and sounds defensive.
