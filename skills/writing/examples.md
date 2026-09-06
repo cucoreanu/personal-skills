@@ -73,3 +73,17 @@ Feedback:
 - “Bound to having” is academic filler in front of the punchline. Put the visible thing last and stop.
 - Repeat the last noun once. Doubling it reads like a typo, not emphasis.
 - Adding how the UI works, or conceding “yeah they’re just windows,” over-explains and sounds defensive.
+- This shape is for that nit. Do not reuse “my bar for” on the next person in the thread.
+
+## Example 4
+
+A later commenter on the same post makes a different point (object vs job). User drafted a conversational reply with a coinage. Do not rewrite it into “my bar for installer is…”
+
+Suggested send stays in their voice, e.g.:
+
+> I partially agree. For me an installer is something that installs it for you. On a Mac you still drop the app in Applications — they just put that folder next to it. I’d call it a facilitator.
+
+Feedback:
+
+- New person, new message. Clean grammar and cut a little air. Keep “partially agree” if that is how they talk.
+- Do not force the previous template. A coinage at the end is enough.

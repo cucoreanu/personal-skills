@@ -30,7 +30,7 @@ npx skills add cucoreanu/personal-skills --skill writing
 
 - Path: [`skills/writing/`](./skills/writing/)
 - Response shape: clean version → what changed and why → risk check → better pattern to learn
-- Patterns: work updates (context → focus → pause → reason → status) · joke nits (bar for [word] is [one visible thing]; punchline last, once)
+- Patterns: work updates (context → focus → pause → reason → status) · joke nits (definition last, once; do not reuse “bar for” on every later comment)
 
 ### penpot-design
 

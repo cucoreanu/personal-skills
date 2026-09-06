@@ -70,17 +70,15 @@ This helps the user sound clear, calm, and in control instead of dumping disconn
 
 ## Joke correction / short public reply
 
-When someone nits a joke (facts, wording, “actually…”), do **not** re-argue the original claim. Restate the punchline as a **definition**.
-
-Pattern:
+When someone nits a joke (facts, wording, “actually…”), do **not** re-argue the original claim. Restate the punchline as a **definition**. One shape that worked:
 
 > My bar for [the contested word] is [one visible thing].
 
-The last noun does the work. Cut academic filler (*bound to having*, *in the sense that*, *what I meant was*). Say the bar once; do not double the punchline (*is the arrow is the arrow*).
+Use that shape only when it fits that kind of nit. Do **not** reuse it on every later comment in the same thread. A new person is a new message: keep their voice, grant what they’re right about in ordinary language, and do not force “my bar for.”
 
-Do not add the mechanism, screenshot recap, or a concession of their nit. On a short public thread, extra explanation kills the line.
+The last noun can still do the work (a coinage, a pick). Cut academic filler (*bound to having*, *in the sense that*, *what I meant was*). Do not double the punchline.
 
-This is the same skill as work writing: pick one concrete object, put it last, stop.
+Do not add the mechanism or a screenshot recap unless this comment needs it. On a short public thread, extra explanation kills the line.
 
 ## Examples
 
