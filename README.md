@@ -33,7 +33,7 @@ npx skills add cucoreanu/personal-skills --skill writing
 
 ### penpot-design
 
-Designs UI in Penpot via MCP with component discipline, flex alignment, mockup/design modes, and optional skill updates from user feedback. Use for Penpot mockups, high-fidelity designs, Penpot MCP work, or component/variant refactors in Penpot.
+Designs UI in Penpot via MCP with component discipline, flex alignment, outside-in build order, mockup/design modes, and optional skill updates from user feedback. Use for Penpot mockups, high-fidelity designs, Penpot MCP work, or component/variant refactors in Penpot.
 
 ```bash
 npx skills add cucoreanu/personal-skills --skill penpot-design
@@ -41,9 +41,22 @@ npx skills add cucoreanu/personal-skills --skill penpot-design
 
 - Path: [`skills/penpot-design/`](./skills/penpot-design/)
 - Modes: `mockup` (low-fi validation; multi-alt only when asked) · `design` (higher fidelity)
+- Canvas: outside-in (container → child shells → nested elements)
 - Extendable: asks before capturing reusable user feedback into the skill; updates `personal-skills` after the current task, then reinstalls
-- References: Material-inspired control alignment, Penpot API pitfalls
+- References: Material-inspired control alignment, Penpot API pitfalls, canvas build order
 - Research notes: [`research/penpot-design-practices.md`](./research/penpot-design-practices.md), [`research/material-design-alignment.md`](./research/material-design-alignment.md)
+
+### penpot-mockup
+
+Plans and builds UI mockups in Penpot with user-centered workflow, fidelity levels, a six-step process, and outside-in canvas assembly. Use when creating mockups, screen mockups, wireframe-to-mockup work, low/high-fidelity UI, platform-specific layouts, or mockup design best practices in Penpot.
+
+```bash
+npx skills add cucoreanu/personal-skills --skill penpot-mockup
+```
+
+- Path: [`skills/penpot-mockup/`](./skills/penpot-mockup/)
+- Execute builds with **`penpot-design`** (components, flex, API, outside-in tree)
+- Fidelity: `low` (structure/flow) or `high` (color, type, polish)
 
 ### install-local-skill
 

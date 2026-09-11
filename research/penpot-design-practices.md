@@ -275,6 +275,7 @@ Avoid: finalize as a copy → need deep edits → recreate from scratch without 
 | Fills/strokes arrays are immutable element-wise | Replace whole arrays (MCP overview) |
 | Working on wrong page | MCP follows **focused** page/tab ([MCP server](https://help.penpot.app/mcp/)) |
 | Large unsupervised rewrites | Describe changes first; small reversible steps ([MCP server](https://help.penpot.app/mcp/)) |
+| Leaves then wrappers (nondeterministic trees) | Empty flex container → sibling shells → recurse; never wrap leftover leaves |
 | No visual check | Use `export_shape` / screenshots; direct the gaze ([MCP](https://help.penpot.app/mcp/), [Good prompting](https://help.penpot.app/mcp/good-prompting-practices-design/)) |
 | Inventing design-system values | Constraints: only existing tokens/components ([Good prompting](https://help.penpot.app/mcp/good-prompting-practices-design/)) |
 
@@ -375,7 +376,7 @@ Workflows and checklists an agent skill should **require**:
 
 - **Preconditions:** Confirm MCP connection + focused page; start with read-only inspect (`shapeStructure`, list components/tokens) before writes ([MCP server](https://help.penpot.app/mcp/)).  
 - **Ruleset block:** `SOURCE=Penpot MCP`; `NO_INVENTING` colors/spacing/components when system exists; `IF_MISSING → TODO` ([Token-aware prompting](https://help.penpot.app/mcp/prompting-token-aware/), [Good prompting](https://help.penpot.app/mcp/good-prompting-practices-design/)).  
-- **Build order checklist:** tokens (or confirm existing) → atom components → molecule variants → organism compositions → screen boards with flex.  
+- **Build order checklist:** library: tokens (or confirm existing) → atom components → molecule variants. Canvas: **outside-in** — empty flex container → direct-child shells in z-order → recurse into each child’s elements; never wrap leftover leaves.  
 - **Layout gate:** every UI container is a board with flex or grid unless documented absolute overlay; gaps/padding from spacing tokens on flex boards; `penpotUtils.addFlexLayout` if children pre-exist.  
 - **Component gate:** reuse via `instance()` / `switchVariant`; no duplicate mains for the same pattern; structure edits on mains only; detach only with explicit fork intent.  
 - **Variant gate:** properties named `State`/`Size`/`Type` (etc.); unique combinations; layer names/types/hierarchy aligned across variants.  
