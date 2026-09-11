@@ -1,6 +1,6 @@
 ---
 name: writing
-description: Proofreads messages and teaches reusable writing patterns. Use when the user pastes a work message, Slack draft, status update, or asks for proofreading, tone, clarity, grammar, flow, or constructive feedback on writing they will send at work.
+description: Proofreads messages and teaches reusable writing patterns. Use when the user pastes a work message, Slack draft, status update, public/social reply, or asks for proofreading, tone, clarity, grammar, flow, or constructive feedback on writing they will send.
 ---
 
 # Writing
@@ -28,6 +28,8 @@ Point out anything that might read badly, such as:
 - defensive wording
 - vagueness
 - over-explaining
+- academic or filler phrasing in front of a punchline
+- repeating the punchline
 - too much casualness
 - unclear ownership
 - unclear priority
@@ -65,6 +67,18 @@ Template:
 > For Z, the current status is D. There are still E items left.
 
 This helps the user sound clear, calm, and in control instead of dumping disconnected facts.
+
+## Joke correction / short public reply
+
+When someone nits a joke (facts, wording, “actually…”), do **not** re-argue the original claim. Restate the punchline as a **definition**. One shape that worked:
+
+> My bar for [the contested word] is [one visible thing].
+
+Use that shape only when it fits that kind of nit. Do **not** reuse it on every later comment in the same thread. A new person is a new message: keep their voice, grant what they’re right about in ordinary language, and do not force “my bar for.”
+
+The last noun can still do the work (a coinage, a pick). Cut academic filler (*bound to having*, *in the sense that*, *what I meant was*). Do not double the punchline.
+
+Do not add the mechanism or a screenshot recap unless this comment needs it. On a short public thread, extra explanation kills the line.
 
 ## Examples
 

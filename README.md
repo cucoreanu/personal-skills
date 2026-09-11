@@ -22,7 +22,7 @@ npx skills add cucoreanu/personal-skills --skill remind-me
 
 ### writing
 
-Proofreads Slack-style workplace messages and teaches reusable writing patterns. Use when the user pastes a work message, Slack draft, status update, or asks for proofreading, tone, clarity, grammar, flow, or constructive feedback on writing they will send at work.
+Proofreads messages and teaches reusable writing patterns. Use when the user pastes a work message, Slack draft, status update, public/social reply, or asks for proofreading, tone, clarity, grammar, flow, or constructive feedback on writing they will send.
 
 ```bash
 npx skills add cucoreanu/personal-skills --skill writing
@@ -30,6 +30,7 @@ npx skills add cucoreanu/personal-skills --skill writing
 
 - Path: [`skills/writing/`](./skills/writing/)
 - Response shape: clean version → what changed and why → risk check → better pattern to learn
+- Patterns: work updates (context → focus → pause → reason → status) · joke nits (definition last, once; do not reuse “bar for” on every later comment)
 
 ### penpot-design
 
