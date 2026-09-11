@@ -1,6 +1,6 @@
 ---
 name: penpot-design
-description: Designs UI in Penpot via MCP with component discipline, flex alignment, mockup/design modes, and optional skill updates from user feedback. Use for Penpot mockups, high-fidelity designs, Penpot MCP work, or component/variant refactors in Penpot.
+description: Designs UI in Penpot via MCP with component discipline, flex alignment, outside-in build order, mockup/design modes, and optional skill updates from user feedback. Use for Penpot mockups, high-fidelity designs, Penpot MCP work, or component/variant refactors in Penpot.
 ---
 
 # Penpot Design
@@ -27,7 +27,9 @@ Stop when any is missing.
 
 **Layout:** flex/grid; `penpotUtils.addFlexLayout` if children exist. Spacing: 8dp scale (4 half-step). Controls: [material-alignment.md](references/material-alignment.md). Active = variant/style, not layout shift. Z-order: background → content → overlays.
 
-**Process:** group existing → `createComponent` → replace dupes with instances. Order: tokens → atoms → variants → screens. Verify with `export_shape`. Plan before large rewrites.
+**Build tree:** outside-in only — container (empty + flex) → its direct-child shells (z-order) → recurse into each child’s elements. Never wrap existing leaves. Detail: [build-order.md](references/build-order.md).
+
+**Process:** library: tokens → atoms → variants. Then assemble screens with the build tree. Existing work: group → `createComponent` → replace dupes with instances. Verify with `export_shape`. Plan before large rewrites.
 
 **API:** [penpot-api.md](references/penpot-api.md). Deep dive: repo `research/penpot-design-practices.md`.
 
@@ -47,4 +49,5 @@ If feedback could become a **generic** Penpot rule (not project-specific), ask: 
 - [ ] Mode, instructions, platform (if needed) confirmed
 - [ ] Dupes are components; states are variants
 - [ ] Flex/grid + Material-inspired control alignment
+- [ ] Canvas built outside-in (container → child shells → nested elements)
 - [ ] Mockup low-fi / design hi-fi per mode; export checked
