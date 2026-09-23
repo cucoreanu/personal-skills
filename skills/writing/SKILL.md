@@ -68,4 +68,4 @@ This helps the user sound clear, calm, and in control instead of dumping disconn
 
 ## Examples
 
-See [examples.md](examples.md) for before/after messages and the kind of feedback to give. Those examples are fictional. Never put real coworker names, product names, or internal project details in this skill.
+See [examples.md](examples.md) for before/after messages and the kind of feedback to give. Examples stay anonymous: use placeholders such as `[name]`, a teammate, and another team. Do not use personal names, even ones that only look fictional, and do not use real product names or internal project details.
