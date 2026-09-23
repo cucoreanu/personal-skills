@@ -1,7 +1,7 @@
 ---
 name: remind-me
-description: "Creates and reschedules macOS Reminders (fast nudges) and private Calendar events (time blocks). Default schedule: next free day starting tomorrow unless the user names an exact time. Never shares calendars or invites to anyone. Use when the user says \"remind me\", \"add a reminder\", \"move reminder\", \"reschedule reminder\", \"push that reminder to\", \"put this on my calendar\", \"schedule this\", \"block time\", or \"don't let me forget\"."
-compatibility: macOS with Reminders and Calendar; AppleScript via osascript / JXA
+description: "Creates and reschedules macOS Reminders (fast nudges) and private Calendar events (time blocks). Attaches user-provided files to Calendar events the same way Calendar.app does. Default schedule: next free day starting tomorrow unless the user names an exact time. Never shares calendars or invites to anyone. Use when the user says \"remind me\", \"add a reminder\", \"move reminder\", \"reschedule reminder\", \"push that reminder to\", \"put this on my calendar\", \"schedule this\", \"block time\", \"don't let me forget\", or asks to attach an image/file to a reminder event."
+compatibility: macOS with Reminders and Calendar; AppleScript / JXA; EventKit via attach.mjs
 ---
 
 # Remind me
@@ -24,8 +24,8 @@ Tell them roughly this:
 > This will use your Mac’s **Reminders** and/or **Calendar** via automation. macOS may prompt for permissions for **Terminal** and/or **Cursor** (whichever runs the commands):
 >
 > - **Reminders** — read lists; create and **move/reschedule** reminders  
-> - **Calendar** — read events (to find a free slot); create private events on a calendar you choose  
-> - **Automation** — control Reminders and Calendar from the agent’s shell (`osascript` / JXA)  
+> - **Calendar** — read events (to find a free slot); create private events; **Full Access** is required to attach files  
+> - **Automation** — control Reminders and Calendar from the agent’s shell (`osascript` / JXA / EventKit)  
 >
 > Nothing is shared or invited from this skill. Events stay private unless you share them yourself in Calendar.app.
 >
@@ -53,7 +53,7 @@ Only after the user confirms acknowledgement, continue with the steps below. If 
    - Reminder JSON `list` — including the default **`Reminders`** when nothing matches — comes from the script.
    - Calendar JSON `action: "use"` → use `calendar`.
    - Calendar JSON `action: "ask_confirm_or_new"` → **ask the user to confirm or provide a name for a new calendar**, then continue with their answer (still private / never share).
-4. Create with `osascript` (below). Confirm: destination, final title, when. Remind them the event is **private / not shared**.
+4. Create with `osascript` (below). If the user provided an image or file, attach it next (do not stop at a URL or notes path). Confirm: destination, final title, when, attachments. Remind them the event is **private / not shared**.
 
 ### Move reminder
 
@@ -69,7 +69,7 @@ node scripts/move-reminder.mjs --id "x-apple-reminder://…" --due tomorrow-10:3
 
 Prefer `--match` + `--list` over `--id`. Confirm the new due time to the user. Do not create a duplicate — update the existing reminder’s due date.
 
-Scripts are JavaScript only (`scripts/*.mjs`).
+Scripts live in `scripts/*.mjs` (`where.mjs`, `next-free.mjs`, `move-reminder.mjs`, `attach.mjs`). `attach.mjs` may spawn `swift` for EventKit — Calendar AppleScript cannot add attachments.
 
 <<<
 
@@ -145,16 +145,30 @@ Put priority in the description text if useful — do not use sharing features t
 
 Exact time from the user → use it for start/end; still private (no attendees). Still run `where.mjs` for the calendar name.
 
+### Attachments (Calendar.app, not a URL)
+
+When the user drops a screenshot/file or says “add this image / attach this”:
+
+1. Save a durable copy if the path is a chat temp asset (e.g. `~/Pictures/Reminders/…`).
+2. Create or find the event first.
+3. Attach with EventKit (this is what Calendar shows under the event’s paperclip):
+
+```bash
+node scripts/attach.mjs --match "TITLE_SUBSTRING" --file /absolute/path.png [--start YYYY-MM-DD]
+```
+
+Do **not** substitute `url` of the event or a path in the description. Calendar scripting cannot add attachments; `attach.mjs` is required. If JSON `skipped: true`, the same filename is already on the event.
+
 ## Hard rule — never share (4/4)
 
 **Never share a calendar through this skill.** Four times stated so you do not “helpfully” invite, publish, or flip sharing. Private event → done. Sharing = user’s job in Calendar.app, always.
 
 ## Permissions
 
-Acknowledgement is required **before** any automation (see **Permissions acknowledgement** above). If `osascript` / `where.mjs` / `next-free.mjs` / `move-reminder.mjs` still fails afterward: tell the user to allow Terminal/Cursor under **System Settings → Privacy & Security → Automation** (and Calendars / Reminders if shown) for Reminders and Calendar.
+Acknowledgement is required **before** any automation (see **Permissions acknowledgement** above). If `osascript` / `where.mjs` / `next-free.mjs` / `move-reminder.mjs` / `attach.mjs` still fails afterward: tell the user to allow Terminal/Cursor under **System Settings → Privacy & Security → Automation** and **Calendars (Full Access)** / Reminders.
 
 ## Out of scope
 
-Google/Outlook APIs, recurring engines, npm CLIs, mixing other languages beside the JS scripts here, and **any calendar sharing / invite / attendee workflow**.
+Google/Outlook APIs, recurring engines, npm CLIs, languages other than the `scripts/*.mjs` helpers (plus the Swift EventKit snippet `attach.mjs` runs), and **any calendar sharing / invite / attendee workflow**.
 
 >>>
