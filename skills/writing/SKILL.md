@@ -66,6 +66,22 @@ Template:
 
 This helps the user sound clear, calm, and in control instead of dumping disconnected facts.
 
+## Explaining a reaction
+
+When they explain why someone reacted sharply (a repeated comment, a rude reply, a disagreement), use:
+
+> Who did what → what they repeated → what that caused
+
+Give the cause its own sentence and a clear subject. Do not hang it on a participle (“was pushing it, pointing out…”), or the reader cannot tell who did what.
+
+Use “got on their nerves,” not “got to their nerve.” “My answer” sounds like a defense. “My read” fits when they are explaining what happened.
+
+Keep a swear or insult only when the reaction itself is the point. Otherwise name the reaction in plain words (“told them off”) and spend the sentence on the cause.
+
+If they judge a claim (“overly defensive,” “nitpicky”), say whose claim and what it was. Without that, the judgment stays vague.
+
+Generalize the people in any example you add. Use roles (one reviewer, the other reviewer). Do not use coworker names, product names, or model names.
+
 ## Examples
 
 See [examples.md](examples.md) for before/after messages and the kind of feedback to give. Those examples are fictional. Never put real coworker names, product names, or internal project details in this skill.

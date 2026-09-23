@@ -1,6 +1,6 @@
 # Examples
 
-Fictional. Do not use real coworkers, product names, or internal project details.
+Fictional. Do not use real coworkers, product names, or internal project details. When an example explains a reaction, use roles, not names.
 
 ## Example 1
 
@@ -52,3 +52,29 @@ Feedback:
 - “facilitate the rollout” is correct but a bit stiff. “Support the rollout” is clearer.
 - “I think putting those scripts out is higher priority” is understandable but rough. “Shipping those scripts should be prioritized” sounds more professional.
 - The original had good transparency, but the flow needed clearer sequencing.
+
+## Example 3
+
+Explaining why someone reacted. The people are roles. The situation is a repeated comment and a sharp reply.
+
+User wrote:
+
+> Context: one reviewer left the same comment twice, the other reviewer told them to fuck off on the second comment.
+>
+> My answer: the first reviewer was pushing it, pointing out the same overly defensive claim got to the other reviewer’s nerve
+
+Suggested clean version:
+
+> Context: one reviewer left the same comment twice. On the second one, the other reviewer told them to fuck off.
+>
+> My read: the first reviewer was pushing it. Repeating the same overly defensive claim is what got on the other reviewer’s nerves.
+
+Feedback:
+
+- The cause is glued to a participle (“pointing out…”), so it is unclear who did that.
+- “Got to their nerve” is the wrong idiom. Use “got on their nerves.”
+- “My answer” sounds like a defense. “My read” fits an explanation.
+- Main issue: the reader cannot see who did what.
+- Why it matters: the point is the cause (the same comment, twice). Without a clear subject, the explanation sounds like a shrug.
+- Pattern: Who did what → what they repeated → what that caused.
+- Risk: keep the swear only if the reaction itself is the point. Otherwise say “told them off” and spend the sentence on the cause. “Overly defensive claim” still needs whose claim, and what it was.
