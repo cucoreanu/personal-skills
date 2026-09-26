@@ -58,6 +58,18 @@ npx skills add cucoreanu/personal-skills --skill penpot-mockup
 - Execute builds with **`penpot-design`** (components, flex, API, outside-in tree)
 - Fidelity: `low` (structure/flow) or `high` (color, type, polish)
 
+### adapt-iphone-duo
+
+Interviews the user one decision at a time about adapting an existing iPhone app to iPhone Duo and writes an adaptation decision record only after they confirm a shared understanding. Use when the user is designing or adapting an app for iPhone Duo, a folding iPhone, outer and inner displays, or side-placed controls.
+
+```bash
+npx skills add cucoreanu/personal-skills --skill adapt-iphone-duo
+```
+
+- Path: [`skills/adapt-iphone-duo/`](./skills/adapt-iphone-duo/)
+- Output: `iphone-duo.md` in the app project, after the user confirms
+- References: session rules in [`references/principles.md`](./skills/adapt-iphone-duo/references/principles.md)
+
 ### install-local-skill
 
 Agent-only. After the user asks to create a PR for a new or updated skill under skills/ (never this skill), check project install vs source with scripts/diff-install.mjs; if missing or stale, ask to install locally via relative symlinks. Use when authoring or changing skills in this repo, opening a skill PR, or finishing skill work.
