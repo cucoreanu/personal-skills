@@ -70,6 +70,18 @@ npx skills add cucoreanu/personal-skills --skill adapt-iphone-duo
 - Output: `iphone-duo.md` in the app project, after the user confirms
 - References: session rules in [`references/principles.md`](./skills/adapt-iphone-duo/references/principles.md)
 
+### codex-babysitting
+
+Monitors one GitHub PR for new review feedback, implements only meaningful fixes, and pushes back on unrealistic or overly defensive comments using concise evidence. Use when the user asks to babysit, watch, or monitor Codex/reviewer comments on a PR.
+
+```bash
+npx skills add cucoreanu/personal-skills --skill codex-babysitting
+```
+
+- Path: [`skills/codex-babysitting/`](./skills/codex-babysitting/)
+- Judgment model: `Fix` / `Expected` / `Unrealistic` / `Over-defensive` / `Needs direction`
+- Guard rail: requires impact + plausible trigger + positive complexity trade-off before changing code
+
 ### install-local-skill
 
 Agent-only. After the user asks to create a PR for a new or updated skill under skills/ (never this skill), check project install vs source with scripts/diff-install.mjs; if missing or stale, ask to install locally via relative symlinks. Use when authoring or changing skills in this repo, opening a skill PR, or finishing skill work.
