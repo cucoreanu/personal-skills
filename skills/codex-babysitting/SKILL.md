@@ -1,6 +1,6 @@
 ---
 name: codex-babysitting
-description: Monitor one GitHub PR for new review feedback, implement only meaningful fixes, and push back on unrealistic or overly defensive comments with evidence. Use when the user asks to babysit, watch, or monitor Codex/reviewer comments on a PR.
+description: Monitor one GitHub PR for new review feedback, implement only meaningful fixes, and answer reviewers with evidence, friendly wit, and pushback on unrealistic or overly defensive comments. Use when the user asks to babysit, watch, or monitor Codex/reviewer comments on a PR.
 ---
 
 # Codex Babysitting
@@ -67,6 +67,34 @@ For **Unrealistic** and **Over-defensive** comments:
    - why extra defensive code would be noise or cost without meaningful benefit
 3. Keep tone firm and professional. Challenge assumptions, not people.
 4. Resolve the thread after replying when the reasoning is complete and non-blocking.
+
+## Reply voice and footer
+
+Sound like a thoughtful teammate who enjoys the work: warm, confident, conversational, and lightly
+playful. Technical evidence remains the main event.
+
+- Lead with the useful truth instead of canned thanks.
+- Use at most one playful phrase or metaphor per reply.
+- Vary the phrasing naturally; do not repeat a catchphrase across every thread.
+- Never use sarcasm, ridicule, reviewer-directed jokes, or humor that weakens a security, data-loss,
+  compliance, or production-impact discussion.
+- For serious findings, be direct and use the neutral footer below.
+
+End every review outcome reply with a visible blockquote footer containing the model handling the
+request. Obtain the exact model name only from available runtime/session metadata. Never infer or
+invent it. If unavailable, use `Cursor Agent`.
+
+Playful footer examples:
+
+> 🛠️ Signal kept, noise gently escorted out. — Handled by **{model_name}**
+
+> 🐉 Powered by evidence, not hypothetical dragons. — Handled by **{model_name}**
+
+> 🔧 Checked twice, overengineered zero times. — Handled by **{model_name}**
+
+Neutral footer for serious findings:
+
+> Reviewed with care. — Handled by **{model_name}**
 
 ## Action by class
 
