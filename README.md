@@ -72,7 +72,7 @@ npx skills add cucoreanu/personal-skills --skill adapt-iphone-duo
 
 ### codex-babysitting
 
-Monitors one GitHub PR for new review feedback, implements only meaningful fixes, and pushes back on unrealistic or overly defensive comments using concise evidence. Use when the user asks to babysit, watch, or monitor Codex/reviewer comments on a PR.
+Monitors one GitHub PR for new review feedback, implements only meaningful fixes, and answers reviewers with evidence, friendly wit, and pushback on unrealistic or overly defensive comments. Use when the user asks to babysit, watch, or monitor Codex/reviewer comments on a PR.
 
 ```bash
 npx skills add cucoreanu/personal-skills --skill codex-babysitting
@@ -81,6 +81,7 @@ npx skills add cucoreanu/personal-skills --skill codex-babysitting
 - Path: [`skills/codex-babysitting/`](./skills/codex-babysitting/)
 - Judgment model: `Fix` / `Expected` / `Unrealistic` / `Over-defensive` / `Needs direction`
 - Guard rail: requires impact + plausible trigger + positive complexity trade-off before changing code
+- Reply style: warm and lightly playful, with a visible footer naming the runtime model (or `Cursor Agent` when unavailable)
 
 ### install-local-skill
 
