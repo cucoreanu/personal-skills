@@ -82,7 +82,8 @@ playful. Technical evidence remains the main event.
 
 End every review outcome reply with a visible blockquote footer containing the model handling the
 request. Obtain the exact model name only from available runtime/session metadata. Never infer or
-invent it. If unavailable, use `Cursor Agent`.
+invent it. If unavailable, use the name of the host agent/tool you are running in (for example
+`Codex`, `Claude Code`, or `Cursor`), and if that is also unknown, use `AI agent`.
 
 Write a fresh footer tagline for every reply. Derive it from that reply's actual content: the specific
 issue, file, function, or reasoning (for example, a null check on a value that can never be null, or a
