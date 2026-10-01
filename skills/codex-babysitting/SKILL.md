@@ -82,19 +82,24 @@ playful. Technical evidence remains the main event.
 
 End every review outcome reply with a visible blockquote footer containing the model handling the
 request. Obtain the exact model name only from available runtime/session metadata. Never infer or
-invent it. If unavailable, use `Cursor Agent`.
+invent it. If unavailable, use the name of the host agent/tool you are running in (for example
+`Codex`, `Claude Code`, or `Cursor`), and if that is also unknown, use `AI agent`.
 
-Playful footer examples:
+Write a fresh footer tagline for every reply. Derive it from that reply's actual content: the specific
+issue, file, function, or reasoning (for example, a null check on a value that can never be null, or a
+retry loop that already exists upstream). Keep it to one short line with an optional leading emoji.
 
-> 🛠️ Signal kept, noise gently escorted out. — Handled by **{model_name}**
+- Never reuse a tagline from these instructions, from earlier replies on the PR, or from earlier
+  scans. Check the PR's existing comments and make sure yours is different.
+- Do not fall back on generic taglines about "signal/noise", "dragons", or "checked twice". If the
+  tagline could fit any comment, rewrite it until it fits only this one.
+- The tagline is flavor only; it must not carry technical claims the reply body does not support.
+- Serious findings (security, data loss, compliance, production impact) get a plain, sincere footer
+  with no joke, still written for that finding rather than a stock phrase.
 
-> 🐉 Powered by evidence, not hypothetical dragons. — Handled by **{model_name}**
+Format (the tagline below is a placeholder showing structure only; never copy it):
 
-> 🔧 Checked twice, overengineered zero times. — Handled by **{model_name}**
-
-Neutral footer for serious findings:
-
-> Reviewed with care. — Handled by **{model_name}**
+> {emoji} {original tagline tied to this reply} — Handled by **{model_name}**
 
 ## Action by class
 
