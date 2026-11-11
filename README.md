@@ -83,6 +83,18 @@ npx skills add cucoreanu/personal-skills --skill codex-babysitting
 - Guard rail: requires impact + plausible trigger + positive complexity trade-off before changing code
 - Reply style: warm and lightly playful, with a visible footer naming the runtime model (or `Cursor Agent` when unavailable)
 
+### fresh-branch
+
+Runs scripts/fresh-branch.sh to detect the default branch, fast-forward it, and create a branch with the name the agent chooses. The agent checks the repo matches that result and, when the script fails or the check does not, tells the user what must change in the workflow. Use when the user asks to start a branch, branch off main or master, update the default branch and branch from it, or begin work from a fresh up-to-date base.
+
+```bash
+npx skills add cucoreanu/personal-skills --skill fresh-branch
+```
+
+- Path: [`skills/fresh-branch/`](./skills/fresh-branch/)
+- Script: `scripts/fresh-branch.sh` — detect the default branch, fast-forward it, create the named branch
+- Agent: chooses the branch name, checks the result, and reports what must change when the script does not succeed
+
 ### install-local-skill
 
 Agent-only. After the user asks to create a PR for a new or updated skill under skills/ (never this skill), check project install vs source with scripts/diff-install.mjs; if missing or stale, ask to install locally via relative symlinks. Use when authoring or changing skills in this repo, opening a skill PR, or finishing skill work.
